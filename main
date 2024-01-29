@@ -1,0 +1,7 @@
+from random import choice
+from string import ascii_letters, digits, punctuation
+
+password_length = int(input('Введите желаемую длинну пароля:'))
+symbols_for_password = ascii_letters + digits + punctuation
+password = ''.join(choice(symbols_for_password) for _ in range(password_length))
+print(f'Ваш пароль: {password}')
